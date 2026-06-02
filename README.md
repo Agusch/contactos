@@ -22,13 +22,9 @@ Crea un archivo llamado `.env` en la raíz del proyecto y añade la configuraci�
 
 ``env
 DB_NAME=agenda
-
 DB_USER=postgres
-
 DB_PASSWORD=admin
-
 DB_HOST=localhost
-
 DB_PORT=5432``
 
 
