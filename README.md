@@ -14,7 +14,9 @@ Antes de comenzar, asegúrate de tener instalado:
 
 ## Instalación y Configuración Local
 
-Pasos para cargar el proyecto de manera local
+Para cargar el proyecto de manera local previamente debe crear su entorno virtual en python y activarlo. 
+Despues dentro del del proyecto seguir los siguientes pasos.
+
 ### 1. Configurar las Variables de Entorno
 Crea un archivo llamado `.env` en la raíz del proyecto y añade la configuración para la conexión a tu Base de Datos. 
 
