@@ -32,6 +32,7 @@ pip install -r requirements.txt
 
 ### Hacer migraciones 
 python manage.py makemigrations catalogos
+
 python manage.py makemigrations api
 
 python manage.py migrate
