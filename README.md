@@ -19,12 +19,12 @@ Pasos para cargar el proyecto de manera local
 Crea un archivo llamado `.env` en la raíz del proyecto y añade la configuración para la conexión a tu Base de Datos. 
 
 **Ejemplo de contenido (`.env`):**
-```env
+``env
 DB_NAME=agenda
 DB_USER=postgres
 DB_PASSWORD=admin
 DB_HOST=localhost
-DB_PORT=5432
+DB_PORT=5432``
 
 
 ### Instalar las dependencias 
