@@ -45,4 +45,6 @@ python manage.py migrate api
 ### LLenar catalogos
 python manage.py seed
 
+## Crear carpeta "media" en el directorio raiz del proyecto
+
 ### Cargar el postman collection para hacer pruebas

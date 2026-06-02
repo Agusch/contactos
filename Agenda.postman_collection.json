@@ -12,11 +12,8 @@
       "item": [
         {
           "name": "Crear Contacto",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "formdata",
@@ -134,7 +131,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:8000/contactos/filtrar?nombre=&page=2&size=1",
+              "raw": "http://localhost:8000/contactos/filtrar?nombre=&page=1&size=1",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -151,7 +148,7 @@
                 },
                 {
                   "key": "page",
-                  "value": "2"
+                  "value": "1"
                 },
                 {
                   "key": "size",
