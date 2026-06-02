@@ -36,7 +36,9 @@ python manage.py makemigrations catalogos
 
 python manage.py makemigrations api
 
-python manage.py migrate
+python manage.py migrate catalogos
+
+python manage.py migrate api
 
 ### LLenar catalogos
 python manage.py seed
