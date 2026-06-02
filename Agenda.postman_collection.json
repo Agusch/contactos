@@ -1,0 +1,227 @@
+{
+  "info": {
+    "_postman_id": "642320ed-d56a-4864-b55e-a0f93a9201f6",
+    "name": "Agenda",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47220443",
+    "_collection_link": "https://go.postman.co/collection/47220443-642320ed-d56a-4864-b55e-a0f93a9201f6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Api",
+      "item": [
+        {
+          "name": "Crear Contacto",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "contacto",
+                  "value": "{\"nombre\":\"Servando\",\"apellido_paterno\":\"Quezada\",\"apellido_materno\":\"Serrano\",\"fecha_nacimiento\":\"1994-08-28\"}",
+                  "type": "text",
+                  "uuid": "be85dc45-76ea-424d-9821-0f9f30e749ef"
+                },
+                {
+                  "key": "direccion",
+                  "value": "{\"estado\":\"HID\",\"municipio\":\"San Agustin Tlaxiaca\",\"colonia\":\"San Juan Tilcuautla\",\"calle\":\"20 de noviembre\",\"numero_exterior\":\"Lote 4\",\"numero_interior\":\"14\"}",
+                  "type": "text",
+                  "uuid": "8ed986bd-f897-4390-acfa-9ada3e381df8"
+                },
+                {
+                  "key": "telefonos",
+                  "value": "[{\"tipo\":1,\"alias\":\"Celular\",\"numero\":\"5512345678\"},{\"tipo\":2,\"alias\":\"Casa\",\"numero\":\"5512345679\"}]",
+                  "type": "text",
+                  "uuid": "d4e26e9a-c9e2-4faf-996e-0adf37df74ff"
+                },
+                {
+                  "key": "fotografia",
+                  "type": "file",
+                  "uuid": "9e81313d-8969-4fec-adf2-9ed1b7957555",
+                  "src": "/C:/Users/agustin/Pictures/Saved Pictures/[000021].jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/contactos/crear",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "contactos",
+                "crear"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Editar Contacto por id",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "contacto",
+                  "value": "{\"nombre\":\"Servando Agustin\"}",
+                  "type": "text",
+                  "uuid": "f6d4d4da-3625-4763-9e1e-7f9a52e55536"
+                },
+                {
+                  "key": "telefonos",
+                  "value": "[{\"tipo\":1,\"alias\":\"Celular\",\"numero\":\"7712081858\"}]",
+                  "type": "text",
+                  "uuid": "08e277a6-4f0d-402c-929f-f6e6f7f32970"
+                },
+                {
+                  "key": "fotografia",
+                  "type": "file",
+                  "uuid": "992ac146-6ed6-4862-95d8-db461eba0941",
+                  "src": "/C:/Users/agustin/Pictures/Saved Pictures/[000021].jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8000/contactos/{id}/editar/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "contactos",
+                "{id}",
+                "editar",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Contacto por id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/contactos/{id}/eliminar",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "contactos",
+                "{id}",
+                "eliminar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filtrar Contactos por nombre y número telefónico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/contactos/filtrar?nombre=&page=2&size=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "contactos",
+                "filtrar"
+              ],
+              "query": [
+                {
+                  "key": "nombre",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": "2"
+                },
+                {
+                  "key": "size",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Catalogos",
+      "item": [
+        {
+          "name": "Filtrar catalogo de estados por nombre e id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/catalogos/estados?id=b&page=1&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "catalogos",
+                "estados"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "b"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener catalogo TIoposTelefono",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/catalogos/tipo-telefono",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "catalogos",
+                "tipo-telefono"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
